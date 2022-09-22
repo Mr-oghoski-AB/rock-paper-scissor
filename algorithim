@@ -1,0 +1,6 @@
+ steps on creating a rock paper scissors game 
+create an array of [rock , paper , scissor]
+create a function that randomly picks an item for computer 
+create a variable that takes the users input 
+create a varaible that takes the computers inputs 
+write a function that will play a single round of rock paper scissor
