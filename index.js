@@ -4,7 +4,8 @@ function getComputerChoice (item) {
 
 }
 
-const playerSelection = prompt ("Rock Paper Scissor ? "  );
+let playerSelection1 = prompt ("Rock Paper Scissor ? "  );
+const playerSelection = playerSelection1.toLowerCase()
 const computerSelection = getComputerChoice(item);
 
 function playRound(playerSelection, computerSelection){
@@ -32,8 +33,9 @@ function playRound(playerSelection, computerSelection){
         return "you LOSE !! Rock beats paper"
     }
     else {
-        return "Wrong input!!! GIplease input Rock , Paper or Scissor"
+        return "Wrong input!!! please input Rock , Paper or Scissor"
     }
 }
-console.log("computer choice is " + getComputerChoice(item))
 console.log (playRound(playerSelection, computerSelection))
+console.log("computer choice is " + getComputerChoice(item))
+
