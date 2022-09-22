@@ -3,13 +3,13 @@ function getComputerChoice (item) {
     return item[Math.floor(Math.random()*item.length)];
 
 }
-console.log(getComputerChoice(item))
-const playerSelection = prompt ("Rock paper Scissors ? "  );
+
+const playerSelection = prompt ("Rock Paper Scissor ? "  );
 const computerSelection = getComputerChoice(item);
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection == computerSelection ){
-        let display = "its a tie "
+        let display = "its a tie, Please try again "
         return display
     } 
     else if (playerSelection == item[1] && computerSelection == item[0]) {
@@ -32,8 +32,8 @@ function playRound(playerSelection, computerSelection){
         return "you LOSE !! Rock beats paper"
     }
     else {
-        console.log ("you lose !!!")
+        return "Wrong input!!! GIplease input Rock , Paper or Scissor"
     }
 }
-
+console.log("computer choice is " + getComputerChoice(item))
 console.log (playRound(playerSelection, computerSelection))
