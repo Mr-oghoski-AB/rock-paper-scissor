@@ -7,26 +7,28 @@ function getComputerChoice (item) {
 
 
 let playerSelection ;
-const computerSelection = getComputerChoice(item);
+let computerSelection = getComputerChoice(item);
 let computerScore = 0;  
 let playerScore = 0;
 
 
 
 function playRound(playerSelection, computerSelection){
-    let playerSelection1 = prompt("Rock Paper Scissor ? ")  ; 
+    let userTurn = prompt("Rock Paper Scissor ? ")  ; 
    
    
-    if ((playerSelection1 == item[0]) ||
-        (playerSelection1 == item [1] )|| 
-        (playerSelection1 == item [2])) {
-            playerSelection = playerSelection1.toLowerCase();
+    if ((userTurn == item[0]) ||
+        (userTurn == item [1] )|| 
+        (userTurn == item [2])) {
+            playerSelection = userTurn.toLowerCase();
 
     }
 
     if (playerSelection == computerSelection ){
+        computerScore += 1; 
+        playerScore += 1;
         let display = "its a tie, Please try again "
-        return display
+        return display;
     } 
     else if (playerSelection == item[1] && computerSelection == item[0]) {
         playerScore += 1 
@@ -65,8 +67,8 @@ console.log("computer choice is " + getComputerChoice(item));
 function game() {
     for (let numberOfGames = 0; numberOfGames < 6; numberOfGames++ ) {
         if (numberOfGames != 5) {
-            let gameScores = `user: ${playerScore}  computer: ${computerScore}  ` 
             console.log (playRound(playerSelection, computerSelection))
+            let gameScores = `user: ${playerScore}  computer: ${computerScore}  `
             console.log (gameScores)
             
         }
