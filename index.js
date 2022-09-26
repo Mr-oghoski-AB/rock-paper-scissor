@@ -35,7 +35,7 @@ function playRound(playerSelection, computerSelection){
     if (playerSelection == computerSelection ){
         computerScore += 1; 
         playerScore += 1;
-        let display = "its a tie, Please try again "
+        let display = "its a tie "
         return display;
     } 
     else if (playerSelection == item[1] && computerSelection == item[0]) {
@@ -84,7 +84,7 @@ function game() {
             
         }
         else if (numberOfGames = 5 && playerScore > computerScore ) {
-            return "you Win!!"
+            return "you Win!! the machine didn't stand a chance"
         }
         else if (numberOfGames = 5 && computerScore > playerScore){
             return "you lose!!!! Better luck next time"
