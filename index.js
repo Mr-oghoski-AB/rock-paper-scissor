@@ -1,15 +1,20 @@
 const item = ['rock', 'paper' , 'scissor'];
-function getComputerChoice (item) {
-    return item[Math.floor(Math.random()*item.length)];
-
-}
-
-
-
 let playerSelection ;
-let computerSelection = getComputerChoice(item);
+let computerSelection ;
 let computerScore = 0;  
 let playerScore = 0;
+
+function getComputerChoice () {
+    let compTurn = item[Math.floor(Math.random()*item.length)];
+   
+   
+    if ((compTurn == item[0]) || 
+        (compTurn == item [1]) || 
+        (compTurn == item [2])) {
+            computerSelection = compTurn;
+        }
+     
+}
 
 function playRound(playerSelection, computerSelection){
     let userTurn = prompt("Rock Paper Scissor ? ")  ; 
@@ -65,9 +70,9 @@ function playRound(playerSelection, computerSelection){
 function game() {
     for (let numberOfGames = 0; numberOfGames < 6; numberOfGames++ ) {
         if (numberOfGames != 5) {
-            getComputerChoice(item);
+            console.log (getComputerChoice())
             console.log (playRound(playerSelection, computerSelection));
-            console.log("computer choice is " + getComputerChoice(item));
+            console.log("computer choice is " + computerSelection);
             let gameScores = `user: ${playerScore}  computer: ${computerScore}  `;
             console.log (gameScores);
             
