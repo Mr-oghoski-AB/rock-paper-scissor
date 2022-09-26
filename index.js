@@ -10,7 +10,7 @@ const playerSelection = playerSelection1.toLowerCase();
 const computerSelection = getComputerChoice(item);
 let computerScore = 0;  
 let playerScore = 0;
-let gameScores = `user: ${playerScore}  computer: ${computerScore}  ` 
+
 
 
 function playRound(playerSelection, computerSelection){
@@ -57,10 +57,10 @@ console.log("computer choice is " + getComputerChoice(item));
 function game() {
     for (let numberOfGames = 0; numberOfGames < 6; numberOfGames++ ) {
         if (numberOfGames != 5) {
-    
+            let gameScores = `user: ${playerScore}  computer: ${computerScore}  ` 
             console.log (playRound(playerSelection, computerSelection))
             console.log (gameScores)
-      
+            
         }
         else if (numberOfGames = 5 && playerScore > computerScore ) {
             return "you Win!!"
