@@ -5,8 +5,8 @@ function getComputerChoice (item) {
 }
 
 
-let playerSelection1 = prompt("Rock Paper Scissor ? ")  ;
-const playerSelection = playerSelection1.toLowerCase();
+
+let playerSelection ;
 const computerSelection = getComputerChoice(item);
 let computerScore = 0;  
 let playerScore = 0;
@@ -14,7 +14,15 @@ let playerScore = 0;
 
 
 function playRound(playerSelection, computerSelection){
+    let playerSelection1 = prompt("Rock Paper Scissor ? ")  ; 
+   
+   
+    if ((playerSelection1 == item[0]) ||
+        (playerSelection1 == item [1] )|| 
+        (playerSelection1 == item [2])) {
+            playerSelection = playerSelection1.toLowerCase();
 
+    }
 
     if (playerSelection == computerSelection ){
         let display = "its a tie, Please try again "
