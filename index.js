@@ -11,8 +11,6 @@ let computerSelection = getComputerChoice(item);
 let computerScore = 0;  
 let playerScore = 0;
 
-
-
 function playRound(playerSelection, computerSelection){
     let userTurn = prompt("Rock Paper Scissor ? ")  ; 
    
@@ -53,7 +51,7 @@ function playRound(playerSelection, computerSelection){
     }
     else if ( playerSelection == item[2] && computerSelection == item [0]){
         computerScore += 1
-        return "you LOSE !! Rock beats paper";
+        return "you LOSE !! rock beats scissors";
     }
     else {
         return "Wrong input!!! please input Rock , Paper or Scissor"
@@ -62,14 +60,16 @@ function playRound(playerSelection, computerSelection){
 }
 
 
-console.log("computer choice is " + getComputerChoice(item));
+
 
 function game() {
     for (let numberOfGames = 0; numberOfGames < 6; numberOfGames++ ) {
         if (numberOfGames != 5) {
-            console.log (playRound(playerSelection, computerSelection))
-            let gameScores = `user: ${playerScore}  computer: ${computerScore}  `
-            console.log (gameScores)
+            getComputerChoice(item);
+            console.log (playRound(playerSelection, computerSelection));
+            console.log("computer choice is " + getComputerChoice(item));
+            let gameScores = `user: ${playerScore}  computer: ${computerScore}  `;
+            console.log (gameScores);
             
         }
         else if (numberOfGames = 5 && playerScore > computerScore ) {
@@ -77,6 +77,9 @@ function game() {
         }
         else if (numberOfGames = 5 && computerScore > playerScore){
             return "you lose!!!! Better luck next time"
+        }
+        else if (numberOfGames = 5 && playerScore == computerScore) {
+            return 'its a Tie!! its been a really tight game'
         }
     }
 
