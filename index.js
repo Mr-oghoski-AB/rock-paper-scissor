@@ -16,16 +16,21 @@ function getComputerChoice () {
      
 }
 
-function playRound(playerSelection, computerSelection){
-    let userTurn = prompt("Rock Paper Scissor ? ")  ; 
+function getPlayerChoice () {
+    let userTurn = prompt("Rock Paper Scissor ? ").toLowerCase()  ; 
    
    
     if ((userTurn == item[0]) ||
         (userTurn == item [1] )|| 
         (userTurn == item [2])) {
-            playerSelection = userTurn.toLowerCase();
+            playerSelection = userTurn;
 
     }
+
+}
+
+function playRound(playerSelection, computerSelection){
+
 
     if (playerSelection == computerSelection ){
         computerScore += 1; 
@@ -71,6 +76,7 @@ function game() {
     for (let numberOfGames = 0; numberOfGames < 6; numberOfGames++ ) {
         if (numberOfGames != 5) {
             console.log (getComputerChoice())
+            console.log (getPlayerChoice())
             console.log (playRound(playerSelection, computerSelection));
             console.log("computer choice is " + computerSelection);
             let gameScores = `user: ${playerScore}  computer: ${computerScore}  `;
