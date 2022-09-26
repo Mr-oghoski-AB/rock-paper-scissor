@@ -1,4 +1,4 @@
-const item = ['rock', 'paper' , 'scissor'];
+const item = ['rock', 'paper' , 'scissors'];
 let playerSelection ;
 let computerSelection ;
 let computerScore = 0;  
@@ -17,7 +17,7 @@ function getComputerChoice () {
 }
 
 function getPlayerChoice () {
-    let userTurn = prompt("Rock Paper Scissor ? ").toLowerCase()  ; 
+    let userTurn = prompt("Rock Paper Scissors ? ").toLowerCase()  ; 
    
    
     if ((userTurn == item[0]) ||
@@ -64,7 +64,7 @@ function playRound(playerSelection, computerSelection){
         return "you LOSE !! rock beats scissors";
     }
     else {
-        return "Wrong input!!! please input Rock , Paper or Scissor"
+        return "Wrong input!!! please input Rock , Paper or Scissors"
     }
 
 }
