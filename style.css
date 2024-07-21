@@ -1,0 +1,14 @@
+body{
+    font-family: sans-serif;
+    background-color: black;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    color: white;
+}
+
+section {
+    background-color: rgb(12, 12, 12);
+    width: 50%;
+    height: 50vh;
+}
