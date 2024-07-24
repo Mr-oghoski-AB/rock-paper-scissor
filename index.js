@@ -1,5 +1,5 @@
 const item = ['rock', 'paper' , 'scissors'];
-const options = document.querySelectorAll('section button')
+const options = document.querySelectorAll('section div button')
 let choice = Array.from(options)
 const round = document.querySelector('#result');
 const player = document.querySelector('.Player');
